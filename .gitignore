@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Files
+*.parquet
+*.csv
+!'hello/5m-Sales-Records/5m Sales Records.csv'
