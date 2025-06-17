@@ -5,6 +5,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+'''
+Comparing read and write speeds of csv and parquet file types using PANDAS.
+The PyArrow engine is used for handling the parquet data.
+'''
+
 # Read the CSV file in chunks
 chunksize = 10**6  # Adjust the chunk size as needed
 csv_file = '5m-Sales-Records/5m Sales Records.csv'
