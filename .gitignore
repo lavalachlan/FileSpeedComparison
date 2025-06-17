@@ -13,3 +13,5 @@ wheels/
 *.parquet
 *.csv
 *.zip
+hello/5m-Sales-Records.zip
+hello/5m-Sales-Records/5m Sales Records.csv
