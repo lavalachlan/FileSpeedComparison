@@ -1,3 +1,4 @@
+import datetime
 import polars as pl
 import pandas as pd
 
@@ -43,3 +44,7 @@ alltaxi_pd_filtered = alltaxi_pd[
     alltaxi_pd["pickup_at"] > pd.Timestamp("2019-06-30")
 ][["vendor_id", "pickup_at", "total_amount"]].head(10)
 print(alltaxi_pd_filtered)
+
+from datetime import datetime
+import polars as pl
+pl.datetime(datetime(2019, 6, 30))

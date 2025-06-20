@@ -4,6 +4,7 @@ import pyarrow as pa
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import benchmark
 
 '''
 Comparing read and write speeds of csv and parquet file types using PANDAS.
@@ -37,26 +38,14 @@ df = pd.DataFrame({
 
 ### ChatGPT example ###
 
-# Benchmarking function
-def benchmark(func, *args, runs=5, label="", **kwargs):
-    times = []
-    for _ in range(runs):
-        start = time.perf_counter()
-        func(*args, **kwargs)
-        end = time.perf_counter()
-        times.append(end - start)
-    avg_time = np.mean(times)
-    print(f"{label:<15} | Avg: {avg_time:.6f}s over {runs} runs")
-    return avg_time
-
 # Run benchmarks
 results_write = {
-    "CSV Write": benchmark(df.to_csv, "Sales.csv", index=False, label="CSV Write"),
-    "Parquet Write": benchmark(df.to_parquet, "Sales.parquet", engine="pyarrow", label="Parquet Write")
+    "CSV Write": benchmark.func(df.to_csv, "Sales.csv", index=False, label="CSV Write"),
+    "Parquet Write": benchmark.func(df.to_parquet, "Sales.parquet", engine="pyarrow", label="Parquet Write")
 }
 results_read = {
-    "CSV Read": benchmark(pd.read_csv, "Sales.csv", label="CSV Read"),
-    "Parquet Read": benchmark(pd.read_parquet, "Sales.parquet", engine="pyarrow", label="Parquet Read"),
+    "CSV Read": benchmark.func(pd.read_csv, "Sales.csv", label="CSV Read"),
+    "Parquet Read": benchmark.func(pd.read_parquet, "Sales.parquet", engine="pyarrow", label="Parquet Read"),
 }
 
 # Table output
