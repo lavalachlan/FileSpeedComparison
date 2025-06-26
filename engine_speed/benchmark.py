@@ -35,7 +35,7 @@ def relative_speeds(time_dict):
     return speed_dict
 
 # Helper function to plot results
-def plot_results(results_dict, title, filename=None, relative=False, xtick_rotation=0):
+def plot_results(results_dict, title, filename=None, show=False, relative=False, xtick_rotation=0):
     if relative:
         y_label = "Relative Time (x)"
     else:
@@ -56,4 +56,6 @@ def plot_results(results_dict, title, filename=None, relative=False, xtick_rotat
     plt.tight_layout()
     if filename:
         plt.savefig(filename)
-    plt.show()
+        plt.close()
+    if show:
+        plt.show()
