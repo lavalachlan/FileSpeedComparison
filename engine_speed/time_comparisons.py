@@ -3,14 +3,6 @@ import pandas as pd
 import polars as pl
 import duckdb
 from datetime import datetime
-# import time
-import pyarrow as pa
-# import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-# import glob
-# import pyarrow.dataset as ds
-# import pyarrow.parquet as pq
 
 # Benchmark .py file
 import benchmark as bm
