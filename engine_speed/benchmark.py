@@ -55,7 +55,7 @@ def plot_results(results_dict, title, filename=None, show=False, relative=False,
         plt.xticks(rotation=xtick_rotation, ha='right')
     plt.tight_layout()
     if filename:
-        plt.savefig(filename)
+        plt.savefig(f"images/{filename}")
         plt.close()
     if show:
         plt.show()

@@ -11,6 +11,7 @@ SHOW_PLOTS = False
 REPEAT_TIMES = 5
 
 ### Pushdown comparisons for Pandas and Polars
+
 ## Pandas pushdown methods
 # --- Full scan: read everything, filter after
 def pd_read_all_then_filter():

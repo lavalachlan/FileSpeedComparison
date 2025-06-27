@@ -10,7 +10,7 @@ import benchmark as bm
 
 FILE = "data/taxi_2019_04.parquet"
 FILTER = [("pickup_at", ">", datetime(2019, 6, 30))]
-COLUMNS = ["pickup_at", "total_amount"]  # subset for projection
+COLUMNS = ["pickup_at", "total_amount"]
 TITLE_START = "1 File Read Benchmark"
 SHOW_PLOTS = False
 REPEAT_TIMES = 5
