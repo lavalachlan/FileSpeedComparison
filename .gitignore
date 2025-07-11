@@ -13,5 +13,11 @@ wheels/
 *.parquet
 *.csv
 *.zip
+*.feather
+*.xlsx
+*.ndjson
+*.json
+*.db
+*.geojson
 hello/5m-Sales-Records.zip
 hello/5m-Sales-Records/5m Sales Records.csv
